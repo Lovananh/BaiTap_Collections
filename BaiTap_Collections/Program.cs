@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-// Định nghĩa interface IExecutable
 interface IExecutable
 {
     void Execute();
 }
 
-// Lớp Program1
 class Program1 : IExecutable
 {
     public void Execute()
@@ -32,7 +30,6 @@ class Program1 : IExecutable
     }
 }
 
-// Lớp Program2
 class Program2 : IExecutable
 {
     public void Execute()
@@ -59,7 +56,6 @@ class Program2 : IExecutable
     }
 }
 
-// Lớp Program3
 class Program3 : IExecutable
 {
     public void Execute()
@@ -86,12 +82,11 @@ class Program3 : IExecutable
     }
 }
 
-// Hàm Main
 internal class Program
 {
     private static void Main(string[] args)
     {
-        // Tạo một mảng các đối tượng chương trình
+
         var programs = new IExecutable[]
         {
             new Program1(),
@@ -99,7 +94,7 @@ internal class Program
             new Program3()
         };
 
-        // Gọi phương thức Execute cho từng bài tập
+
         foreach (var program in programs)
         {
             program.Execute();
